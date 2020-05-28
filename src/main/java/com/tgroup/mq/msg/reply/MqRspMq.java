@@ -1,4 +1,4 @@
-package com.tgroup.mq.msg.device;
+package com.tgroup.mq.msg.reply;
 
 import com.tgroup.mq.msg.MqDeviceData;
 
@@ -17,7 +17,7 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class MqRspCmd extends MqDeviceData {
+public class MqRspMq extends MqDeviceData {
 
     /**
      * MQ消息唯一ID
