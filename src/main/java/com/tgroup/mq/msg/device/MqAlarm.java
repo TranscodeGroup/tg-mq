@@ -3,119 +3,76 @@ package com.tgroup.mq.msg.device;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tgroup.mq.msg.MqDeviceData;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 /**
- * 报警数据
+ * 终端报警信息
+ * 
+ * @author eason
+ * @date 2020/05/28
  */
+@Setter
+@Getter
+@NoArgsConstructor
+@ToString(callSuper = true)
 public class MqAlarm extends MqDeviceData {
 
+    /**
+     * 状态位
+     */
     @JsonProperty("s")
-    private int state; // 标志字段
-
+    private int state;
+    /**
+     * 报警位
+     */
     @JsonProperty("w")
-    private int waring; // 速度 word
+    private int waring;
+    /**
+     * 经度
+     */
+    private double lng;
+    /**
+     * 纬度
+     */
+    private double lat;
 
-    private double lng; // 经度
-
-    private double lat; // 纬度
-
+    /**
+     * 速度 word
+     */
     @JsonProperty("v")
-    private int speed; // 速度 word
+    private int speed;
 
+    /**
+     * 海拔word
+     */
     @JsonProperty("h")
-    private int height; // 海拔word
-
+    private int height;
     @JsonProperty("a")
-    private int azimuth; // 方位角word
 
+    /**
+     * 方位角word
+     */
+    private int azimuth;
+
+    /**
+     * 总里程
+     */
     @JsonProperty("m")
-    private double mileage; // 总里程
+    private double mileage;
 
-    private Integer aid; // 终端报警类型ID
-    private Object att; // 附加消息
+    /**
+     * 终端报警类型ID
+     */
+    @JsonProperty("aid")
+    private Integer alarmId;
 
-    @Override
-    public String toString() {
-        return "MQAlarm [imei=" + getImei() + ",aid=" + aid + ",time=" + getEventTime() + "]";
-    }
-
-    public Integer getAid() {
-        return aid;
-    }
-
-    public void setAid(Integer aid) {
-        this.aid = aid;
-    }
-
-    public int getState() {
-        return state;
-    }
-
-    public void setState(int state) {
-        this.state = state;
-    }
-
-    public int getWaring() {
-        return waring;
-    }
-
-    public void setWaring(int waring) {
-        this.waring = waring;
-    }
-
-    public double getLng() {
-        return lng;
-    }
-
-    public void setLng(double lng) {
-        this.lng = lng;
-    }
-
-    public double getLat() {
-        return lat;
-    }
-
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
-    public short getHeight() {
-        return (short)height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getAzimuth() {
-        return azimuth;
-    }
-
-    public void setAzimuth(int azimuth) {
-        this.azimuth = azimuth;
-    }
-
-    public double getMileage() {
-        return mileage;
-    }
-
-    public void setMileage(double mileage) {
-        this.mileage = mileage;
-    }
-
-    public Object getAtt() {
-        return att;
-    }
-
-    public void setAtt(Object att) {
-        this.att = att;
-    }
+    /**
+     * 附加信息
+     */
+    @JsonProperty("att")
+    private Object attachment;
 
 }

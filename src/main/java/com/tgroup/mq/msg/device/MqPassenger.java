@@ -1,26 +1,32 @@
 package com.tgroup.mq.msg.device;
 
-import java.util.Date;
-
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.tgroup.mq.msg.MqDeviceData;
-import com.tgroup.mq.util.Long2DateDeserializer;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
- * 客流上报
+ * 客流数据上报
+ * 
+ * @author eason
+ * @date 2020/05/28
  */
+@Setter
+@Getter
+@NoArgsConstructor
+@ToString(callSuper = true)
 public class MqPassenger extends MqDeviceData {
 
     /**
      * 开始时间
      */
-    @JsonDeserialize(using = Long2DateDeserializer.class)
-    private Date startTime;
+    private long startTime;
     /**
      * 结束时间
      */
-    @JsonDeserialize(using = Long2DateDeserializer.class)
-    private Date endTime;
+    private long endTime;
     /**
      * 上车人数
      */
@@ -30,55 +36,12 @@ public class MqPassenger extends MqDeviceData {
      */
     private int downNumber;
     /**
+     * 车厢内人数
+     */
+    private int inCarNumber;
+    /**
      * 上传时间
      */
-    @JsonDeserialize(using = Long2DateDeserializer.class)
-    private Date uploadTime;
-
-    @Override
-    public String toString() {
-        return "Passenger [imei=" + getImei() + ",start_time=" + startTime + ",end_time=" + endTime + ",up=" + upNumber
-            + ",down=" + downNumber + ",upload_time=" + uploadTime + "]";
-    }
-
-    public Date getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
-    }
-
-    public Date getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
-    }
-
-    public int getUpNumber() {
-        return upNumber;
-    }
-
-    public void setUpNumber(int upNumber) {
-        this.upNumber = upNumber;
-    }
-
-    public int getDownNumber() {
-        return downNumber;
-    }
-
-    public void setDownNumber(int downNumber) {
-        this.downNumber = downNumber;
-    }
-
-    public Date getUploadTime() {
-        return uploadTime;
-    }
-
-    public void setUploadTime(Date uploadTime) {
-        this.uploadTime = uploadTime;
-    }
+    private long uploadTime;
 
 }
