@@ -1,7 +1,9 @@
 package com.tgroup.mq.msg.safety;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * DSM：驾驶员状态监测
@@ -10,17 +12,19 @@ import lombok.EqualsAndHashCode;
  * @date 2020/05/25
  */
 
-@Data
-@EqualsAndHashCode(callSuper = false)
+@Setter
+@Getter
+@NoArgsConstructor
+@ToString(callSuper = true)
 public class MqDsmAlarm extends MqSafety {
 
     /** 报警/事件类型 **/
-    private int alarmType;
+    private Integer alarmType;
     /** 报警级别 **/
-    private int alarmLevel;
+    private Integer alarmLevel;
     /** 疲劳程度 **/
-    private int fatigueLevel;
+    private Integer fatigueLevel;
     /** 预留 **/
-    private long reserved1;
+    private Integer reserved1;
 
 }

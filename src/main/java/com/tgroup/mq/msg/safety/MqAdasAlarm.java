@@ -1,7 +1,9 @@
 package com.tgroup.mq.msg.safety;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * ADAS：高级驾驶辅助系统报警
@@ -9,8 +11,10 @@ import lombok.EqualsAndHashCode;
  * @author eason
  * @date 2020/05/25
  */
-@Data
-@EqualsAndHashCode(callSuper = false)
+@Setter
+@Getter
+@NoArgsConstructor
+@ToString(callSuper = true)
 public class MqAdasAlarm extends MqSafety {
 
     /** 报警/事件类型 **/

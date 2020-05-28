@@ -35,7 +35,7 @@ public class MqAlarm extends MqDeviceData {
 
     @Override
     public String toString() {
-        return "MQAlarm [imei=" + getImei() + ",aid=" + aid + ",time=" + getTime() + "]";
+        return "MQAlarm [imei=" + getImei() + ",aid=" + aid + ",time=" + getEventTime() + "]";
     }
 
     public Integer getAid() {

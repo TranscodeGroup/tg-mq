@@ -2,39 +2,47 @@ package com.tgroup.mq.msg.safety;
 
 import com.tgroup.mq.msg.MqDeviceData;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
-@EqualsAndHashCode(callSuper = false)
+/**
+ * 主动安全
+ * 
+ * @author eason
+ * @date 2020/05/25
+ */
+@Setter
+@Getter
+@NoArgsConstructor
+@ToString(callSuper = true)
 public class MqSafety extends MqDeviceData {
 
     /** 报警 ID,从 0开始循环累加 **/
-    private long alarmId;
+    private Long alarmId;
     /** 标志状态 **/
-    private int flagStatus;
+    private Integer flagStatus;
 
     /** 速度 **/
-    private int speed;
+    private Integer speed;
     /** 海拔 **/
-    private int height;
+    private Integer height;
     /** 纬度 **/
-    private double lat;
+    private Double lat;
     /** 经度 **/
-    private double lng;
-    /** 事件时间 **/
-    // private long eventTime;
+    private Double lng;
     /** 车辆状态 **/
-    private int vehicleState;
+    private Integer vehicleState;
     /** 终端ID **/
     private String terminalId;
     /** 时间 **/
-    private long markTime;
+    private Long markTime;
     /** 序号 **/
-    private int serialNumber;
+    private Integer serialNumber;
     /** 附件数量 **/
-    private int attachedCount;
+    private Integer attachedCount;
     /** 预留 **/
-    private int reserved;
+    private Integer reserved;
 
 }
