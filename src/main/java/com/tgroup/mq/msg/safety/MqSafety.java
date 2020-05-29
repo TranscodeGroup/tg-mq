@@ -17,6 +17,8 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class MqSafety extends MqDeviceData {
 
+    /** 报警编号,平台下发唯一码 */
+    private String alarmKey;
     /** 报警 ID,从 0开始循环累加 **/
     private Long alarmId;
     /** 标志状态 **/

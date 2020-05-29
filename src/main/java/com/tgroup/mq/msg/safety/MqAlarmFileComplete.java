@@ -1,5 +1,7 @@
 package com.tgroup.mq.msg.safety;
 
+import com.tgroup.mq.msg.MqDeviceData;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,7 +15,12 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString(callSuper = true)
-public class MqAlarmFileComplete {
+public class MqAlarmFileComplete extends MqDeviceData {
+
+    /**
+     * 报警编号：平台为报警分配的唯一编号
+     */
+    private String alarmKey;
     /**
      * 文件名称
      */
