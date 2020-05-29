@@ -137,4 +137,15 @@ public class DateUtil {
             return 0;
         return Math.abs(tz1 - tz2);
     }
+
+    /**
+     * 时间戳秒转日期
+     * 
+     * @param second
+     *            时间戳秒
+     * @return
+     */
+    public static Date secondToDate(long second) {
+        return new Date(second * 1000);
+    }
 }

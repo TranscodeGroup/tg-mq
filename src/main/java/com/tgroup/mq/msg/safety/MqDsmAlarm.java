@@ -1,7 +1,8 @@
 package com.tgroup.mq.msg.safety;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -14,7 +15,6 @@ import lombok.ToString;
 
 @Setter
 @Getter
-@NoArgsConstructor
 @ToString(callSuper = true)
 public class MqDsmAlarm extends MqSafety {
 
@@ -27,4 +27,8 @@ public class MqDsmAlarm extends MqSafety {
     /** 预留 **/
     private Integer reserved1;
 
+    @JsonIgnore
+    public String getAlarmInfo() {
+        return String.valueOf(fatigueLevel);
+    }
 }

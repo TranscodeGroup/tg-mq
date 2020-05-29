@@ -3,7 +3,6 @@ package com.tgroup.mq.msg.safety;
 import com.tgroup.mq.msg.MqDeviceData;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -15,7 +14,6 @@ import lombok.ToString;
  */
 @Setter
 @Getter
-@NoArgsConstructor
 @ToString(callSuper = true)
 public class MqSafety extends MqDeviceData {
 
@@ -23,7 +21,6 @@ public class MqSafety extends MqDeviceData {
     private Long alarmId;
     /** 标志状态 **/
     private Integer flagStatus;
-
     /** 速度 **/
     private Integer speed;
     /** 海拔 **/
@@ -44,5 +41,4 @@ public class MqSafety extends MqDeviceData {
     private Integer attachedCount;
     /** 预留 **/
     private Integer reserved;
-
 }

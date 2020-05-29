@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
 /**
  * 
@@ -18,6 +19,7 @@ public class JsonUtil {
     static {
         if (objectMapper == null) {
             objectMapper = new ObjectMapper();
+            objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);
             objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         }
     }
@@ -73,7 +75,7 @@ public class JsonUtil {
         if (map == null || clazz == null) {
             return null;
         }
-        return clazz.equals(String.class) ? (T) map : objectMapper.convertValue(map, clazz);
+        return clazz.equals(String.class) ? (T)map : objectMapper.convertValue(map, clazz);
     }
 
 }

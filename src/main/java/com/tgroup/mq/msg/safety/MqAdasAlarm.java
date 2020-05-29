@@ -1,7 +1,9 @@
 package com.tgroup.mq.msg.safety;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.tgroup.mq.utils.StringConcat;
+
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -13,7 +15,6 @@ import lombok.ToString;
  */
 @Setter
 @Getter
-@NoArgsConstructor
 @ToString(callSuper = true)
 public class MqAdasAlarm extends MqSafety {
 
@@ -31,4 +32,9 @@ public class MqAdasAlarm extends MqSafety {
     private Short roadSignType;
     /** 道路标识数值 **/
     private Short roadSignValue;
+
+    @JsonIgnore
+    public String getAlarmInfo() {
+        return StringConcat.concat(frontSpeed, frontDistance, deviationType, roadSignType, roadSignValue);
+    }
 }
