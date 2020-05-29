@@ -67,6 +67,11 @@ public final class TgMq {
     public static final String TG_DSM = "TG_DSM";
 
     /**
+     * 报警文件上传完成通知
+     */
+    public static final String TG_ALARM_FILE_COMPLETE = "TG_ALARM_FILE_COMPLETE";
+
+    /**
      * REDIS订阅消息ID 下发REQ 上传RSP
      */
     /**
