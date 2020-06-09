@@ -50,11 +50,11 @@ public class MqAlarm extends MqDeviceData {
      */
     @JsonProperty("h")
     private int height;
-    @JsonProperty("a")
 
     /**
      * 方位角word
      */
+    @JsonProperty("a")
     private int azimuth;
 
     /**

@@ -1,5 +1,6 @@
 package com.tgroup.mq.msg.device;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tgroup.mq.msg.MqDeviceData;
 
@@ -71,5 +72,18 @@ public class MqStop extends MqDeviceData {
      */
     @JsonProperty("m")
     private double mileage;
+
+    /**
+     * 获取运行方向
+     * 
+     * @return
+     */
+    @JsonIgnore
+    public short getDirection() {
+        if (type <= 2) {
+            return type;
+        }
+        return 0;
+    }
 
 }

@@ -10,9 +10,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Speeding {
     public Short sitetype; // 位置类型0：无特定位置；1：圆形区域； 2：矩形区域；3：多边形区域；4：路段；
     public Long siteid; // 区域或路段ID 若位置类型为0，则该字段置0
-    public Short limit; // 限速值 单位：km/h
+    public Integer limit; // 限速值 单位：km/h
 
-    public Short maxv; // 超速峰值速度 仅在超速报警解除时含该字段，单位：km/h
+    public Integer maxv; // 超速峰值速度 仅在超速报警解除时含该字段，单位：km/h
     public Integer duration; // 超速持续时长 仅在超速报警解除时含该字段，单位：秒
 
     public String cardid; // 磁卡信息
@@ -54,19 +54,19 @@ public class Speeding {
         this.siteid = siteid;
     }
 
-    public Short getLimit() {
+    public Integer getLimit() {
         return limit;
     }
 
-    public void setLimit(Short limit) {
+    public void setLimit(Integer limit) {
         this.limit = limit;
     }
 
-    public Short getMaxv() {
+    public Integer getMaxv() {
         return maxv;
     }
 
-    public void setMaxv(Short maxv) {
+    public void setMaxv(Integer maxv) {
         this.maxv = maxv;
     }
 

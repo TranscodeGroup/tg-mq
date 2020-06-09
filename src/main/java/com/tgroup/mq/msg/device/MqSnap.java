@@ -21,7 +21,7 @@ public class MqSnap extends MqDeviceData {
     /**
      * 通道
      */
-    private Byte chn;
+    private Integer chn;
     /**
      * 抓拍类型
      */
