@@ -49,4 +49,12 @@ public class MqDeviceData extends BaseMqData {
         return new Date(this.eventTime * 1000L);
     }
 
+    public Long getReceiveTime() {
+        if (receiveTime == null) {
+            return new Date().getTime() / 1000L;
+        } else {
+            return this.receiveTime;
+        }
+    }
+
 }
