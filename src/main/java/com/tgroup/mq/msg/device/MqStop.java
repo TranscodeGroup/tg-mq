@@ -74,6 +74,29 @@ public class MqStop extends MqDeviceData {
     private double mileage;
 
     /**
+     * 是否补发
+     */
+    @JsonIgnore
+    public boolean isReissue() {
+        return (state & 0x02) == 0x02;
+    }
+
+    /**
+     * 
+     * 读取车辆到站 0站内 1站外
+     */
+    @JsonIgnore
+    public int getOnway() {
+        if (flag == 2) {
+            // 出站
+            return 1;
+        } else {
+            return 0;
+        }
+
+    }
+
+    /**
      * 获取运行方向
      * 
      * @return
