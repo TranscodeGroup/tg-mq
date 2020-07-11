@@ -7,21 +7,19 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
 /**
- * Jackson序列化和反序列,小写下划线
+ * Jackson序列化和反序列,JAVA驼峰
  * 
  * @author eason
  * @date 2020/07/11
  */
-public class JsonUtil {
+public class JacksonUtil {
 
     private static ObjectMapper objectMapper = null;
     static {
         if (objectMapper == null) {
             objectMapper = new ObjectMapper();
-            objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);
             objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         }
     }
@@ -52,7 +50,6 @@ public class JsonUtil {
         if (json == null) {
             return null;
         }
-
         if (objectMapper != null) {
             try {
                 t = objectMapper.readValue(json, cls);
