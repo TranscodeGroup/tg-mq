@@ -7,6 +7,18 @@ package com.tgroup.mq.utils;
 public class BcdUtil {
 
     /**
+     * 获取需要下发的设备的终端手机号
+     */
+    public static byte[] getPhoneNumber(String sim) {
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < 12 - sim.length(); i++) {
+            buffer.append("0");
+        }
+        buffer.append(sim);
+        return str2Bcd(buffer.toString());
+    }
+
+    /**
      * 10进制字符串转byte[]
      */
     public static byte[] str2Bcd(String asc) {
@@ -45,7 +57,7 @@ public class BcdUtil {
             }
 
             int a = (j << 4) + k;
-            byte b = (byte) a;
+            byte b = (byte)a;
             bbt[p] = b;
         }
         return bbt;

@@ -1,8 +1,11 @@
 package com.tgroup.mq.msg.device;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tgroup.mq.msg.MqDeviceData;
+import com.tgroup.mq.pojo.Passenger;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -72,6 +75,21 @@ public class MqStop extends MqDeviceData {
      */
     @JsonProperty("m")
     private double mileage;
+
+    /**
+     * 车厢内人数
+     */
+    private Integer inCarNumber;
+
+    /**
+     * 车门数
+     */
+    private Integer doorCount;
+
+    /**
+     * 门内乘客上下详情
+     */
+    private List<Passenger> passengers;
 
     /**
      * 是否补发
