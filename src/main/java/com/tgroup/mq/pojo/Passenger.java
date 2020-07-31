@@ -13,13 +13,13 @@ public class Passenger {
     /**
      * 门编号
      */
-    private Integer door;
+    private Integer doorId;
     /**
      * 上客数
      */
-    private Integer up;
+    private Integer getOn;
     /**
      * 下客数
      */
-    private Integer down;
+    private Integer getOff;
 }
