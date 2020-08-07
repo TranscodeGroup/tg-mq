@@ -127,4 +127,33 @@ public class MqStop extends MqDeviceData {
         return 0;
     }
 
+    /**
+     * 获取上车人数
+     */
+    @JsonIgnore
+    public Integer getOn() {
+        if (passengers == null) {
+            return null;
+        }
+        int getOn = 0;
+        for (Passenger passenger : passengers) {
+            getOn = getOn + passenger.getGetOn();
+        }
+        return getOn;
+    }
+
+    /**
+     * 获取下车人数
+     */
+    @JsonIgnore
+    public Integer getOff() {
+        if (passengers == null) {
+            return null;
+        }
+        int getOff = 0;
+        for (Passenger passenger : passengers) {
+            getOff = getOff + passenger.getGetOff();
+        }
+        return getOff;
+    }
 }
