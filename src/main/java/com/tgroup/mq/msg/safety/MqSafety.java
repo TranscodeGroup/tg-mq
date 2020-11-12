@@ -1,10 +1,10 @@
 package com.tgroup.mq.msg.safety;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.tgroup.mq.msg.MqDeviceData;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 主动安全
@@ -12,10 +12,9 @@ import lombok.ToString;
  * @author eason
  * @date 2020/05/25
  */
-@Setter
-@Getter
-@ToString(callSuper = true)
-public class MqSafety extends MqDeviceData {
+@Data
+@EqualsAndHashCode(callSuper = false)
+public abstract class MqSafety extends MqDeviceData {
 
     /** 报警编号,平台下发唯一码 */
     private String alarmKey;
@@ -43,4 +42,15 @@ public class MqSafety extends MqDeviceData {
     private Integer attachedCount;
     /** 预留 **/
     private Integer reserved;
+
+    /** 报警/事件类型 **/
+    private int alarmType;
+    /** 报警级别 **/
+    private int alarmLevel;
+
+    /**
+     * 获取主动安全类型
+     */
+    @JsonIgnore
+    public abstract String getSafetyType();
 }

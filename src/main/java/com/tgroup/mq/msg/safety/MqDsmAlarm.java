@@ -1,10 +1,10 @@
 package com.tgroup.mq.msg.safety;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.tgroup.mq.constant.TgSafetyConsts;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * DSM：驾驶员状态监测
@@ -13,15 +13,10 @@ import lombok.ToString;
  * @date 2020/05/25
  */
 
-@Setter
-@Getter
-@ToString(callSuper = true)
+@Data
+@EqualsAndHashCode(callSuper = false)
 public class MqDsmAlarm extends MqSafety {
 
-    /** 报警/事件类型 **/
-    private Integer alarmType;
-    /** 报警级别 **/
-    private Integer alarmLevel;
     /** 疲劳程度 **/
     private Integer fatigueLevel;
     /** 预留 **/
@@ -31,4 +26,11 @@ public class MqDsmAlarm extends MqSafety {
     public String getAlarmInfo() {
         return String.valueOf(fatigueLevel);
     }
+
+    @JsonIgnore
+    @Override
+    public String getSafetyType() {
+        return TgSafetyConsts.DSM;
+    }
+
 }

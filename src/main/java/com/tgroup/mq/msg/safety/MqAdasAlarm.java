@@ -1,11 +1,11 @@
 package com.tgroup.mq.msg.safety;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.tgroup.mq.constant.TgSafetyConsts;
 import com.tgroup.mq.utils.StringConcat;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * ADAS：高级驾驶辅助系统报警
@@ -13,15 +13,10 @@ import lombok.ToString;
  * @author eason
  * @date 2020/05/25
  */
-@Setter
-@Getter
-@ToString(callSuper = true)
+@Data
+@EqualsAndHashCode(callSuper = false)
 public class MqAdasAlarm extends MqSafety {
 
-    /** 报警/事件类型 **/
-    private int alarmType;
-    /** 报警级别 **/
-    private int alarmLevel;
     /** 前车车速 **/
     private Short frontSpeed;
     /** 前车距离 **/
@@ -36,5 +31,11 @@ public class MqAdasAlarm extends MqSafety {
     @JsonIgnore
     public String getAlarmInfo() {
         return StringConcat.concat(frontSpeed, frontDistance, deviationType, roadSignType, roadSignValue);
+    }
+
+    @JsonIgnore
+    @Override
+    public String getSafetyType() {
+        return TgSafetyConsts.ADAS;
     }
 }

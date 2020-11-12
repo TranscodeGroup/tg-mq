@@ -44,6 +44,17 @@ public class MqDeviceData extends BaseMqData {
     @JsonProperty("rt")
     private Long receiveTime;
 
+    /**
+     * 车辆ID
+     */
+    @JsonIgnore
+    private String carId;
+    /***
+     * 车辆名称
+     */
+    @JsonIgnore
+    private String carName;
+
     @JsonIgnore
     public Date getEventDateTime() {
         return new Date(this.eventTime * 1000L);
