@@ -60,6 +60,10 @@ public class MqPassenger extends MqDeviceData {
      */
     private Integer totalToday;
     /**
+     * 0起点 255终点
+     */
+    private Integer stationFlag;
+    /**
      * 上传时间
      */
     private Long uploadTime;
