@@ -22,26 +22,46 @@ public class MqPassenger extends MqDeviceData {
     /**
      * 开始时间
      */
-    private long startTime;
+    private Long startTime;
     /**
      * 结束时间
      */
-    private long endTime;
+    private Long endTime;
     /**
      * 上车人数
      */
-    private int upNumber;
+    private Integer upNumber;
     /**
      * 下车人数
      */
-    private int downNumber;
+    private Integer downNumber;
     /**
      * 车厢内人数
      */
-    private int inCarNumber;
+    private Integer inCarNumber;
+    /**
+     * 线路编号
+     */
+    private Integer routeCode;
+    /**
+     * 线路方向
+     */
+    private Integer direction;
+    /**
+     * 站点编号
+     */
+    private Integer serial;
+    /**
+     * 站台编号
+     */
+    private Integer stopCode;
+    /**
+     * 当天总上车人数
+     */
+    private Integer totalToday;
     /**
      * 上传时间
      */
-    private long uploadTime;
+    private Long uploadTime;
 
 }
