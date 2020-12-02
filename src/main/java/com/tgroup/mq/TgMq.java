@@ -70,11 +70,16 @@ public final class TgMq {
      * 报警文件上传完成通知
      */
     public static final String TG_ALARM_FILE_COMPLETE = "TG_ALARM_FILE_COMPLETE";
-    
+
     /**
-     *视频文件上传完成通知
+     * 视频文件上传完成通知
      */
     public static final String TG_FILE_COMPLETE = "TG_FILE_COMPLETE";
+
+    /**
+     * 终端自检
+     */
+    public static final String TG_SELF_CHECK = "TG_SELF_CHECK";
 
     /**
      * REDIS订阅消息ID 下发REQ 上传RSP
