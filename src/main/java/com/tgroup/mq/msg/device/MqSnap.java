@@ -2,10 +2,8 @@ package com.tgroup.mq.msg.device;
 
 import com.tgroup.mq.msg.MqDeviceData;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 图像抓拍
@@ -13,10 +11,8 @@ import lombok.ToString;
  * @author eason
  * @date 2019/12/23
  */
-@Setter
-@Getter
-@NoArgsConstructor
-@ToString(callSuper = true)
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class MqSnap extends MqDeviceData {
     /**
      * 通道
@@ -44,4 +40,9 @@ public class MqSnap extends MqDeviceData {
      * 纬度
      */
     private Double lat;
+
+    /**
+     * 抓拍指令KEY
+     */
+    private String key;
 }
