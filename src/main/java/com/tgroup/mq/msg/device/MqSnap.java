@@ -45,4 +45,9 @@ public class MqSnap extends MqDeviceData {
      * 抓拍指令KEY
      */
     private String key;
+
+    /**
+     * 多媒体ID
+     */
+    private Integer mediaId;
 }
