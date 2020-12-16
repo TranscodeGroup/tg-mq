@@ -36,4 +36,17 @@ public class MqHeader {
      * 扩展信息
      */
     private HashMap<String, Object> properties;
+
+    /**
+     * 新增扩展信息
+     * 
+     * @param key
+     * @param value
+     */
+    public void addProperties(String key, Object value) {
+        if (properties == null) {
+            properties = new HashMap<>(16);
+        }
+        properties.put(key, value);
+    }
 }
