@@ -24,7 +24,10 @@ public enum Jtt808Protocol {
     public static final String JTT808_PROTOCOL_KEY = "jtt808";
 
     public static Jtt808Protocol toProtocol(String protocol) {
-        switch (protocol) {
+        if (protocol == null) {
+            return JTT_808;
+        }
+        switch (protocol.toUpperCase()) {
             case "ITS":
                 return JTT_808_ITS;
             case "DVR":
