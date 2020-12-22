@@ -82,6 +82,11 @@ public final class TgMq {
     public static final String TG_SELF_CHECK = "TG_SELF_CHECK";
 
     /**
+     * 终端违规
+     */
+    public static final String TG_ILLEGAL = "TG_ILLEGAL";
+
+    /**
      * REDIS订阅消息ID 下发REQ 上传RSP
      */
     /**
