@@ -26,9 +26,9 @@ public class MqIllegal extends MqDeviceData {
     /** 违规标准 */
     private Integer standardValue;
     /** 纬度DWORD */
-    private Long lat;
+    private Double lat;
     /** 经度DWORD */
-    private Long lng;
+    private Double lng;
     /** 海拔WORD */
     private Integer height;
     /** 速度WORD */
