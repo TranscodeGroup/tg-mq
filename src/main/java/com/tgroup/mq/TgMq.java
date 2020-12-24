@@ -284,12 +284,21 @@ public final class TgMq {
     /** 刷卡时间 */
     public static final String DRIVER_CARD_TIME = String.valueOf("e");
 
+    /** #员工表工号 */
+    public static final String DRIVER_EMPLOYEE_ID = String.valueOf("dei");
+    /** #员工表姓名 */
+    public static final String DRIVER_EMPLOYEE_NAME = String.valueOf("den");
+
     /***
      * 乘务员
      */
-    /** 完整姓名 */
-    public static final String CONDUCTOR_CARD_NAME = String.valueOf("c_n");
+    public static final String CONDUCTOR_CARD_ID = String.valueOf("cci");
     /** 刷卡时间 */
-    public static final String CONDUCTOR_CARD_TIME = String.valueOf("c_e");
+    public static final String CONDUCTOR_CARD_TIME = String.valueOf("cct");
+
+    /** #工号 */
+    public static final String CONDUCTOR_EMPLOYEE_ID = String.valueOf("cei");
+    /** #姓名 */
+    public static final String CONDUCTOR_EMPLOYEE_NAME = String.valueOf("cen");
 
 }
