@@ -233,6 +233,11 @@ public final class TgMq {
      */
     public static final String ATT_TEMPS = "temps";
 
+    /** 客流上 */
+    public static final String ATT_ON = String.valueOf("on");
+    /** 客流下 */
+    public static final String ATT_OFF = String.valueOf("off");
+
     /**
      * 视频部分
      */

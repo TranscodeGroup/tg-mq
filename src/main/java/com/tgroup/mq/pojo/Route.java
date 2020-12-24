@@ -2,11 +2,14 @@ package com.tgroup.mq.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Data;
+
 /**
  * 
  * 车辆运行线路和到站信息
  *
  */
+@Data
 public class Route {
     /**
      * 0x16 线路编码 dword
@@ -77,95 +80,7 @@ public class Route {
     @Override
     public String toString() {
         return "Route [code=" + code + ",dir=" + direction + ",flag=" + flag + ",serial=" + serial + ",dist=" + distance
-                + "]";
-    }
-
-    public int getDirection() {
-        return direction;
-    }
-
-    public void setDirection(int direction) {
-        this.direction = direction;
-    }
-
-    public int getFlag() {
-        return flag;
-    }
-
-    public void setFlag(int flag) {
-        this.flag = flag;
-    }
-
-    public int getSerial() {
-        return serial;
-    }
-
-    public void setSerial(int serial) {
-        this.serial = serial;
-    }
-
-    public Integer getDistance() {
-        return distance;
-    }
-
-    public void setDistance(Integer distance) {
-        this.distance = distance;
-    }
-
-    public long getCode() {
-        return code;
-    }
-
-    public void setCode(long code) {
-        this.code = code;
-    }
-
-    public Long getDepartTime() {
-        return departTime;
-    }
-
-    public void setDepartTime(Long departTime) {
-        this.departTime = departTime;
-    }
-
-    public Long getArriveTime() {
-        return arriveTime;
-    }
-
-    public void setArriveTime(Long arriveTime) {
-        this.arriveTime = arriveTime;
-    }
-
-    public Long getEtd() {
-        return etd;
-    }
-
-    public void setEtd(Long etd) {
-        this.etd = etd;
-    }
-
-    public Long getEta() {
-        return eta;
-    }
-
-    public void setEta(Long eta) {
-        this.eta = eta;
-    }
-
-    public Long getPlanDepart() {
-        return planDepart;
-    }
-
-    public void setPlanDepart(Long planDepart) {
-        this.planDepart = planDepart;
-    }
-
-    public Long getPlanArrive() {
-        return planArrive;
-    }
-
-    public void setPlanArrive(Long planArrive) {
-        this.planArrive = planArrive;
+            + "]";
     }
 
 }
