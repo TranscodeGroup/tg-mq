@@ -266,4 +266,30 @@ public final class TgMq {
      */
     public static final String FATIGUE_LEVEL = "fl";
 
+    /***
+     * 驾驶员刷卡附加REDIS -> card,为了兼容track,不要改动
+     */
+    /** 完整姓名 */
+    public static final String DRIVER_CARD_NAME = String.valueOf("n");
+    /** 卡类型 */
+    public static final String DRIVER_CARD_TYPE = String.valueOf("t");
+    /** 性别 */
+    public static final String DRIVER_CARD_SEX = String.valueOf("s");
+    /** 卡号 */
+    public static final String DRIVER_CARD_LICENSE = String.valueOf("l");
+    /** 区域代码 */
+    public static final String DRIVER_CARD_PLACECODE = String.valueOf("p");
+    /** 身份证号 */
+    public static final String DRIVER_CARD_PERSONALID = String.valueOf("pi");
+    /** 刷卡时间 */
+    public static final String DRIVER_CARD_TIME = String.valueOf("e");
+
+    /***
+     * 乘务员
+     */
+    /** 完整姓名 */
+    public static final String CONDUCTOR_CARD_NAME = String.valueOf("c_n");
+    /** 刷卡时间 */
+    public static final String CONDUCTOR_CARD_TIME = String.valueOf("c_e");
+
 }
