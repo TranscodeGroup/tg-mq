@@ -289,6 +289,10 @@ public final class TgMq {
     public static final String MAGNETIC_CARD_PERSONALID = String.valueOf("pi");
     /** 刷卡时间 */
     public static final String MAGNETIC_CARD_TIME = String.valueOf("e");
+    /** 0非法 1合法 **/
+    public static final String MAGNETIC_CARD_VALID = String.valueOf("v");
+    /** 0签退 1签到 **/
+    public static final String MAGNETIC_CHECK_IN = String.valueOf("in");
 
     /***
      * 驾驶员刷磁条卡或按键签到
