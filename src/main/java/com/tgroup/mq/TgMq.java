@@ -274,36 +274,49 @@ public final class TgMq {
     /***
      * 驾驶员刷卡附加REDIS -> card,为了兼容track,不要改动
      */
-    /** 完整姓名 */
-    public static final String DRIVER_CARD_NAME = String.valueOf("n");
-    /** 卡类型 */
-    public static final String DRIVER_CARD_TYPE = String.valueOf("t");
-    /** 性别 */
-    public static final String DRIVER_CARD_SEX = String.valueOf("s");
-    /** 卡号 */
-    public static final String DRIVER_CARD_LICENSE = String.valueOf("l");
-    /** 区域代码 */
-    public static final String DRIVER_CARD_PLACECODE = String.valueOf("p");
-    /** 身份证号 */
-    public static final String DRIVER_CARD_PERSONALID = String.valueOf("pi");
-    /** 刷卡时间 */
-    public static final String DRIVER_CARD_TIME = String.valueOf("e");
 
-    /** #员工表工号 */
-    public static final String DRIVER_EMPLOYEE_ID = String.valueOf("dei");
-    /** #员工表姓名 */
-    public static final String DRIVER_EMPLOYEE_NAME = String.valueOf("den");
+    /** 完整姓名 */
+    public static final String MAGNETIC_CARD_NAME = String.valueOf("n");
+    /** 卡类型 */
+    public static final String MAGNETIC_CARD_TYPE = String.valueOf("t");
+    /** 性别 */
+    public static final String MAGNETIC_CARD_SEX = String.valueOf("s");
+    /** 卡号 */
+    public static final String MAGNETIC_CARD_LICENSE = String.valueOf("l");
+    /** 区域代码 */
+    public static final String MAGNETIC_CARD_PLACECODE = String.valueOf("p");
+    /** 身份证号 */
+    public static final String MAGNETIC_CARD_PERSONALID = String.valueOf("pi");
+    /** 刷卡时间 */
+    public static final String MAGNETIC_CARD_TIME = String.valueOf("e");
 
     /***
-     * 乘务员
+     * 驾驶员刷磁条卡或按键签到
      */
-    public static final String CONDUCTOR_CARD_ID = String.valueOf("cci");
-    /** 刷卡时间 */
-    public static final String CONDUCTOR_CARD_TIME = String.valueOf("cct");
 
-    /** #工号 */
+    /** 驾驶员RFID卡号 */
+    public static final String DRIVER_CARD_ID = String.valueOf("dci");
+    /** 驾驶员RFID刷卡时间 */
+    public static final String DRIVER_CARD_TIME = String.valueOf("dct");
+    /** 驾驶员工号 */
+    public static final String DRIVER_EMPLOYEE_ID = String.valueOf("dei");
+    /** 驾驶员姓名 */
+    public static final String DRIVER_EMPLOYEE_NAME = String.valueOf("den");
+    /** 0未知, 1签到, 2签退 **/
+    public static final String DRIVER_CHECK_IN = String.valueOf("dci");
+
+    /***
+     * 乘务员刷磁条卡
+     */
+    /*** 乘务员RFID卡号 */
+    public static final String CONDUCTOR_CARD_ID = String.valueOf("cci");
+    /** 乘务员刷RFID时间 */
+    public static final String CONDUCTOR_CARD_TIME = String.valueOf("cct");
+    /** 乘务员刷RFID工号 */
     public static final String CONDUCTOR_EMPLOYEE_ID = String.valueOf("cei");
-    /** #姓名 */
+    /** 乘务员刷RFID姓名 */
     public static final String CONDUCTOR_EMPLOYEE_NAME = String.valueOf("cen");
+    /** 0未知, 1签到, 2签退 **/
+    public static final String CONDUCTOR_CHECK_IN = String.valueOf("cci");
 
 }
