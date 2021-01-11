@@ -30,5 +30,9 @@ public class MqVersion extends MqDeviceData {
      * 报站文件版本
      */
     private String site;
+    /**
+     * 设备唯一ID
+     */
+    private String guid;
 
 }
