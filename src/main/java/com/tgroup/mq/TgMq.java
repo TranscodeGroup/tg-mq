@@ -87,6 +87,11 @@ public final class TgMq {
     public static final String TG_ILLEGAL = "TG_ILLEGAL";
 
     /**
+     * 司机手动命令请求
+     */
+    public static final String TG_REQ = "TG_REQ";
+
+    /**
      * REDIS订阅消息ID 下发REQ 上传RSP
      */
     /**
