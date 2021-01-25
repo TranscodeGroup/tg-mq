@@ -238,18 +238,25 @@ public final class TgMq {
      */
     public static final String ATT_TEMPS = "temps";
 
-    /** 客流上 */
-    public static final String ATT_ON = String.valueOf("on");
-    /** 客流下 */
-    public static final String ATT_OFF = String.valueOf("off");
-    /** 一趟累计上车 */
-    public static final String ATT_TRIP_ON = String.valueOf("trip-on");
-    /** 一趟累计下车 */
-    public static final String ATT_TRIP_OFF = String.valueOf("trip-off");
-    /** 当天累计上车 */
-    public static final String ATT_DAY_ON = String.valueOf("day-on");
-    /** 当天累计下车 */
-    public static final String ATT_DAY_OFF = String.valueOf("day-off");
+    /** 附加乘客对象 */
+    public static final String PASSENGER = String.valueOf("passenger");
+
+    /** 5s客流上 */
+    public static final String PASSENGER_5S_ON = String.valueOf("on-5s");
+    /** 5s客流下 */
+    public static final String PASSENGER_5S_OFF = String.valueOf("off-5s");
+    /** 行程客流上 */
+    public static final String PASSENGER_TRIP_ON = String.valueOf("on-trip");
+    /** 行程客流下 */
+    public static final String PASSENGER_TRIP_OFF = String.valueOf("off-trip");
+    /** 一天客流上 */
+    public static final String PASSENGER_DAY_ON = String.valueOf("on-day");
+    /** 一天客流下 */
+    public static final String PASSENGER_DAY_OFF = String.valueOf("off-day");
+    /** 最后更新站序 */
+    public static final String PASSENGER_SERIAL = String.valueOf("serial");
+    /** 最后更新时间 */
+    public static final String PASSENGER_TIME = String.valueOf("time");
 
     /**
      * 视频部分
