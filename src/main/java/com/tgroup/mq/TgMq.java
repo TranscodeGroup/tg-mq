@@ -242,6 +242,14 @@ public final class TgMq {
     public static final String ATT_ON = String.valueOf("on");
     /** 客流下 */
     public static final String ATT_OFF = String.valueOf("off");
+    /** 一趟累计上车 */
+    public static final String ATT_TRIP_ON = String.valueOf("trip-on");
+    /** 一趟累计下车 */
+    public static final String ATT_TRIP_OFF = String.valueOf("trip-off");
+    /** 当天累计上车 */
+    public static final String ATT_DAY_ON = String.valueOf("day-on");
+    /** 当天累计下车 */
+    public static final String ATT_DAY_OFF = String.valueOf("day-off");
 
     /**
      * 视频部分
