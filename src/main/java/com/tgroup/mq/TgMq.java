@@ -242,17 +242,17 @@ public final class TgMq {
     public static final String PASSENGER = String.valueOf("passenger");
 
     /** 5s客流上 */
-    public static final String PASSENGER_REAL_ON = String.valueOf("on-real");
+    public static final String PASSENGER_REAL_ON = String.valueOf("on_real");
     /** 5s客流下 */
-    public static final String PASSENGER_REAL_OFF = String.valueOf("off-real");
+    public static final String PASSENGER_REAL_OFF = String.valueOf("off_real");
     /** 行程客流上 */
-    public static final String PASSENGER_TRIP_ON = String.valueOf("on-trip");
+    public static final String PASSENGER_TRIP_ON = String.valueOf("on_trip");
     /** 行程客流下 */
-    public static final String PASSENGER_TRIP_OFF = String.valueOf("off-trip");
+    public static final String PASSENGER_TRIP_OFF = String.valueOf("off_trip");
     /** 一天客流上 */
-    public static final String PASSENGER_DAY_ON = String.valueOf("on-day");
+    public static final String PASSENGER_DAY_ON = String.valueOf("on_day");
     /** 一天客流下 */
-    public static final String PASSENGER_DAY_OFF = String.valueOf("off-day");
+    public static final String PASSENGER_DAY_OFF = String.valueOf("off_day");
     /** 最后更新站序 */
     public static final String PASSENGER_SERIAL = String.valueOf("serial");
     /** 最后更新时间 */
