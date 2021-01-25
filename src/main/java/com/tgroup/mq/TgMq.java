@@ -242,9 +242,9 @@ public final class TgMq {
     public static final String PASSENGER = String.valueOf("passenger");
 
     /** 5s客流上 */
-    public static final String PASSENGER_5S_ON = String.valueOf("on-5s");
+    public static final String PASSENGER_REAL_ON = String.valueOf("on-real");
     /** 5s客流下 */
-    public static final String PASSENGER_5S_OFF = String.valueOf("off-5s");
+    public static final String PASSENGER_REAL_OFF = String.valueOf("off-real");
     /** 行程客流上 */
     public static final String PASSENGER_TRIP_ON = String.valueOf("on-trip");
     /** 行程客流下 */
