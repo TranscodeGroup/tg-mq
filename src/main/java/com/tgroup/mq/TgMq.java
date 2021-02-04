@@ -238,6 +238,9 @@ public final class TgMq {
      */
     public static final String ATT_TEMPS = "temps";
 
+    /** 日期 */
+    public static final String ATT_WORK_DAY = String.valueOf("day");
+
     /** 附加乘客对象 */
     public static final String PASSENGER = String.valueOf("passenger");
 
