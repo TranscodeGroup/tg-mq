@@ -19,7 +19,7 @@ public class MqConnect extends MqDeviceData {
      */
     private String company;
     /***
-     * 0建立连接 1断开连接
+     * 0断开连接 1建立连接
      */
     private Integer flag;
     /**
