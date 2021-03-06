@@ -67,6 +67,11 @@ public final class TgMq {
     public static final String TG_DSM = "TG_DSM";
 
     /**
+     * 签到签退
+     */
+    public static final String REQ_SIGN_IN = "REQ_SIGN_IN";
+
+    /**
      * 报警文件上传完成通知
      */
     public static final String TG_ALARM_FILE_COMPLETE = "TG_ALARM_FILE_COMPLETE";
@@ -90,6 +95,11 @@ public final class TgMq {
      * 司机手动命令请求
      */
     public static final String TG_REQ = "TG_REQ";
+
+    /**
+     * 车距提醒
+     */
+    public static final String REQ_DISTANCE = "REQ_DISTANCE";
 
     /**
      * REDIS订阅消息ID 下发REQ 上传RSP
