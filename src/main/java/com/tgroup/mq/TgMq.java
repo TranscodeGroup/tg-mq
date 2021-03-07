@@ -309,6 +309,10 @@ public final class TgMq {
      * 疲劳驾驶程度
      */
     public static final String FATIGUE_LEVEL = "fl";
+    /**
+     * 行驶200米一次记录时间
+     */
+    public static final String MOVE_200M = "move_200m";
 
     /***
      * 驾驶员刷卡附加REDIS -> card,为了兼容track,不要改动
