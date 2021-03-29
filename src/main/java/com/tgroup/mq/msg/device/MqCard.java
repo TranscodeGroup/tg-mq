@@ -29,6 +29,10 @@ public class MqCard extends MqDeviceData {
      */
     private Short valid;
     /**
+     * 考勤方式 0默认 1员工卡 2手工输入
+     */
+    private Short source;
+    /**
      * 刷卡完整数据
      */
     private String rfid;
