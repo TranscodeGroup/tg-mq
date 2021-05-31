@@ -8,15 +8,44 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 public class Speeding {
-    public Short sitetype; // 位置类型0：无特定位置；1：圆形区域； 2：矩形区域；3：多边形区域；4：路段；
-    public Long siteid; // 区域或路段ID 若位置类型为0，则该字段置0
-    public Integer limit; // 限速值 单位：km/h
+    /**
+     * 位置类型0：无特定位置；1：圆形区域； 2：矩形区域；3：多边形区域；4：路段；
+     */
+    public Short sitetype;
 
-    public Integer maxv; // 超速峰值速度 仅在超速报警解除时含该字段，单位：km/h
-    public Integer duration; // 超速持续时长 仅在超速报警解除时含该字段，单位：秒
+    /**
+     * 区域或路段ID 若位置类型为0，则该字段置0
+     */
+    public Long siteid;
 
-    public String cardid; // 磁卡信息
-    public String driver; // 司机姓名
+    /**
+     * 限速值 单位：km/h
+     */
+    public Integer limit;
+
+    /**
+     * 超速峰值速度 仅在超速报警解除时含该字段，单位：km/h
+     */
+    public Integer maxv;
+
+    /**
+     * 超速持续时长 仅在超速报警解除时含该字段，单位：秒
+     */
+    public Integer duration;
+
+    /**
+     * 磁卡信息
+     */
+    public String cardid;
+
+    /**
+     * 司机姓名
+     */
+    public String driver;
+    /**
+     * 超速平均速度 仅在超速报警解除时含该字段，单位：km/h
+     */
+    public Integer avgv; //
 
     @Override
     public String toString() {
