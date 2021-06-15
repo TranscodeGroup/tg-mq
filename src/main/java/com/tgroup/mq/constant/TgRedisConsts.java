@@ -79,6 +79,11 @@ public class TgRedisConsts {
     public final static String PASSENGER_STOP_UP = "PASSENGER:STOP-UP:%s:%s";
     public final static String PASSENGER_STOP_DOWN = "PASSENGER:STOP-DOWN:%s:%s";
     /**
+     * 线路日客流,企业,日期
+     */
+    public final static String PASSENGER_ROUTE_UP = "PASSENGER:ROUTE-UP:%s:%s";
+    public final static String PASSENGER_ROUTE_DOWN = "PASSENGER:ROUTE-DOWN:%s:%s";
+    /**
      * 时段日客流,企业,日期
      */
     public final static String PASSENGER_TIME_UP = "PASSENGER:TIME-UP:%s:%s";
