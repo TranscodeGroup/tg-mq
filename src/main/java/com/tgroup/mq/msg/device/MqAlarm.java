@@ -2,6 +2,7 @@ package com.tgroup.mq.msg.device;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tgroup.mq.msg.MqDeviceData;
+import com.tgroup.mq.pojo.Route;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -69,6 +70,10 @@ public class MqAlarm extends MqDeviceData {
     @JsonProperty("aid")
     private Integer alarmId;
 
+    /**
+     * 公交附加信息
+     */
+    private Route route;
     /**
      * 附加信息
      */
