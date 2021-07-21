@@ -21,18 +21,9 @@ jobs:
         distribution: 'adopt'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         
-    - name: maven-settings-xml-action
-      uses: whelk-io/maven-settings-xml-action@v18
-      with:
-        repositories: '[{ "id": "github", "url": "https://maven.pkg.github.com/TranscodeGroup/*" }]'
-        servers: '[{ "id": "github", "username":"${{ secrets.GIT_USERNAME }}", "password": "${{ secrets.GIT_PASSWORD }}" }]'
-
     - name: checkout-action
       uses: actions/checkout@v2
-    
-    - name: Login to Registry 
-      run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
-            
+
     - name: Build with Maven
       run: mvn --batch-mode deploy -Dmaven.test.skip=true
       env:
