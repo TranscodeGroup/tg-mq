@@ -100,6 +100,11 @@ public class TgRedisConsts {
     public final static String TRIP_START = "TRIP:START:%s:%s";
 
     /**
+     * 上一次进出站,企业-终端
+     */
+    public final static String TRIP_DEPART_ARRIVE = "TRIP:DEPART:ARRIVE:%s:%s";
+
+    /**
      * REDIS,设备最后连接状态
      */
     public static final String MQ_DEVICE_STATE = "MQ:DEVICE:STATE";
