@@ -202,7 +202,10 @@ public final class TgMq {
      * 事件设置
      */
     public static final String REQ_DEV_EVENT = "REQ_DEV_EVENT";
-
+    /**
+     * 乘客信息发布
+     */
+    public static final String REQ_DEV_PASSENGER = "REQ_DEV_PASSENGER";
     /**
      * 扩展信息
      */
