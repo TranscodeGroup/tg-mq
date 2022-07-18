@@ -56,10 +56,22 @@ public class Attachment {
     public Number fatigueLevel;
 
     /**
-     * 疲劳等级
+     * 油量电压
      */
     @JsonProperty("ad2")
     public Number ad2;
+
+    /***
+     * 电池电压
+     */
+    @JsonProperty("bv")
+    public Double batteryV;
+
+    /***
+     * 电源电压
+     */
+    @JsonProperty("pv")
+    public Double powerV;
 
     /**
      * 扩展车辆信号状态位
@@ -159,6 +171,22 @@ public class Attachment {
             temps = new ArrayList<>();
         }
         temps.add(temp);
+    }
+
+    public Double getBatteryV() {
+        return batteryV;
+    }
+
+    public void setBatteryV(Double batteryV) {
+        this.batteryV = batteryV;
+    }
+
+    public Double getPowerV() {
+        return powerV;
+    }
+
+    public void setPowerV(Double powerV) {
+        this.powerV = powerV;
     }
 
 }
