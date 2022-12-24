@@ -251,6 +251,11 @@ public final class TgMq {
      */
     public static final String ATT_TEMPS = "temps";
 
+    /**
+     * 公交13 业务类型定义
+     */
+    public static final String ATT_BUSINESS_TYPE = "bt";
+
     /** 里程日期 */
     public static final String ATT_WORK_DAY = String.valueOf("day");
 
