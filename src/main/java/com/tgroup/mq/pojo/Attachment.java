@@ -77,7 +77,13 @@ public class Attachment {
      * 扩展车辆信号状态位
      */
     @JsonProperty("io")
-    public Number io; //
+    public Number io;
+
+    /**
+     * 激烈驾驶扩展位
+     */
+    @JsonProperty("fm")
+    public Integer fm;
 
     /**
      * 温感
