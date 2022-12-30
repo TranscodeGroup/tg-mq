@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * 
  * 通用附加数据
  *
  */
+@JsonInclude(Include.NON_NULL)
 public class Attachment {
 
     /**
@@ -84,6 +87,12 @@ public class Attachment {
      */
     @JsonProperty("fm")
     public Integer fm;
+
+    /**
+     * 公交业务类型
+     */
+    @JsonProperty("bt")
+    public Integer businessType;
 
     /**
      * 温感
@@ -193,6 +202,22 @@ public class Attachment {
 
     public void setPowerV(Double powerV) {
         this.powerV = powerV;
+    }
+
+    public Integer getFm() {
+        return fm;
+    }
+
+    public void setFm(Integer fm) {
+        this.fm = fm;
+    }
+
+    public Integer getBusinessType() {
+        return businessType;
+    }
+
+    public void setBusinessType(Integer businessType) {
+        this.businessType = businessType;
     }
 
 }

@@ -206,55 +206,6 @@ public final class TgMq {
      * 乘客信息发布
      */
     public static final String REQ_DEV_PASSENGER = "REQ_DEV_PASSENGER";
-    /**
-     * 扩展信息
-     */
-
-    /**
-     * GSM信号
-     */
-    public static final String ATT_GSM = "gsm";
-    /**
-     * 卫星个数
-     */
-    public static final String ATT_SAT = "sat";
-    /**
-     * 电池电压
-     */
-    public static final String ATT_BATTERYV = "bv";
-    /**
-     * 电源电压
-     */
-    public static final String ATT_POWERV = "pv";
-    /**
-     * 刷卡数据
-     */
-    public static final String ATT_RFID = "rfid";
-    /**
-     * 基站信息
-     */
-    public static final String ATT_LBS = "lbs";
-    /**
-     * 油量
-     */
-    public static final String ATT_OIL = "oil";
-    /**
-     * AD2
-     */
-    public static final String ATT_AD2 = "ad2";
-    /**
-     * IO状态
-     */
-    public static final String ATT_IO = "io";
-    /**
-     * 温感
-     */
-    public static final String ATT_TEMPS = "temps";
-
-    /**
-     * 公交13 业务类型定义
-     */
-    public static final String ATT_BUSINESS_TYPE = "bt";
 
     /** 里程日期 */
     public static final String ATT_WORK_DAY = String.valueOf("day");
@@ -297,26 +248,7 @@ public final class TgMq {
      * 丢包率
      */
     public static final String PACKET_LOSS = "loss";
-    /**
-     * 视频信号丢失报警状态
-     */
-    public static final String VIDEO_LOSS = "vl";
-    /**
-     * 视频信号遮挡报警状态
-     */
-    public static final String VIDEO_SHADE = "vs";
-    /**
-     * 存储器故障报警状态
-     */
-    public static final String STORAGE_ERROR = "se";
-    /**
-     * 异常驾驶行为报警
-     */
-    public static final String UNUSUAL_DRIVING = "ud";
-    /**
-     * 疲劳驾驶程度
-     */
-    public static final String FATIGUE_LEVEL = "fl";
+
     /**
      * 行驶200米一次记录时间
      */
